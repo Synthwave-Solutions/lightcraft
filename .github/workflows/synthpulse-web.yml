@@ -30,6 +30,8 @@ jobs:
         with:
           key: synthpulse-web
       - uses: storytold/craft-common-actions/actions/install-trunk@f0808a5ccbc32869248193ffab0de98d733de451
+      - name: Install matching wasm-bindgen
+        run: cargo install wasm-bindgen-cli --version 0.2.129 --locked
       - name: Build our browser app
         env:
           CRAFT_FONTS_DIR: ${{ github.workspace }}/craft-fonts
