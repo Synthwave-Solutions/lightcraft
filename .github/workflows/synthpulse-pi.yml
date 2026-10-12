@@ -18,6 +18,11 @@ jobs:
       CARGO_BUILD_JOBS: '3'
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: storytold/craft-fonts
+          ref: 8dcdacd5153e64560d109541a47d806f26f048c0
+          path: craft-fonts
       - uses: storytold/craft-common-actions/actions/install-linux-deps@f0808a5ccbc32869248193ffab0de98d733de451
         with:
           deb-arch: arm64
